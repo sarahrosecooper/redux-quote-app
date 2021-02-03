@@ -1,7 +1,8 @@
-import { GET_QUOTE, GET_QUOTE_SUCCESS, GET_QUOTE_FAIL } from "../actions";
+import { GET_QUOTE, GET_QUOTE_SUCCESS, GET_QUOTE_FAIL, GET_TAG, GET_TAG_SUCCESS, GET_TAG_FAIL} from "../actions";
 
 const initialState = {
   quote: "",
+  tag: [],
   error: "",
   isFetching: false,
 };
@@ -15,18 +16,37 @@ export const reducer = (state = initialState, action) => {
         isFetching: true,
         error: "",
       };
-      case GET_QUOTE_SUCCESS:
-          return {
-              ...state,
-              quote: action.payload,
-              isFetching: false,
-              error: "",
-          };
-          case GET_QUOTE_FAIL:
-              return {
-                  ...state,
-                  error: action.payload
-              }
+    case GET_QUOTE_SUCCESS:
+      return {
+        ...state,
+        quote: action.payload,
+        isFetching: false,
+        error: "",
+      };
+    case GET_QUOTE_FAIL:
+      return {
+        ...state,
+        error: action.payload,
+      };
+
+    case GET_TAG:
+      return {
+        ...state,
+        isFetching: true,
+        error: "",
+      };
+    case GET_TAG_SUCCESS:
+      return {
+        ...state,
+        tag: action.payload,
+        isFetching: false,
+        error: "",
+      };
+    case GET_TAG_FAIL:
+      return {
+        ...state,
+        error: action.payload,
+      };
     default:
       return state;
   }
