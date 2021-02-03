@@ -1,16 +1,27 @@
 import React from "react";
 import './index.css';
+import Header from './components/Header'
+import Quote from "./components/Quote"
+import Form from "./components/Form"
+import { connect } from "react-redux"
 
-
-
-
-function App() {
+const App = (props) => {
+  console.log(props.quote)
   return (
     <div className="App">
-      <h1>This is the app component</h1>
+      <Header />
+      
+      <Quote />
+      <Form />
      
     </div>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    quote: state.quote,
+  }
+}
+
+export default connect(mapStateToProps, {}) (App);
