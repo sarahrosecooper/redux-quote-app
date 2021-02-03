@@ -10,8 +10,7 @@ const App = (props) => {
   return (
     <div className="App">
       <Header />
-      
-      <Quote />
+      <Quote quote={props.quote}/>
       <Form />
      
     </div>

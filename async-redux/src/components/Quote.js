@@ -2,8 +2,12 @@ import React from "react";
 // import { connect } from "react-redux";
 
 const Quote = props => {
+    console.log("QUOTE PROPS:", props)
     return (
-        <div>This is the quote component</div>
+        <div>
+            {props.quote}
+            
+        </div>
     )
 }
 

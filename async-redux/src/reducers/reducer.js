@@ -1,18 +1,33 @@
-import { NEW_QUOTE } from '../actions'; 
+import { GET_QUOTE, GET_QUOTE_SUCCESS, GET_QUOTE_FAIL } from "../actions";
 
 const initialState = {
-    quote: ["This is quote one", "This is quote two"],
-    error: '',
-    isFetching: false
+  quote: [],
+  error: "",
+  isFetching: false,
 };
 
 export const reducer = (state = initialState, action) => {
-
-switch(action.type) {
-    case NEW_QUOTE:
-        return {
-            ...state,
-        }
-default: return state;
-}
-}
+  console.log("reducer", action);
+  switch (action.type) {
+    case GET_QUOTE:
+      return {
+        ...state,
+        isFetching: true,
+        error: "",
+      };
+      case GET_QUOTE_SUCCESS:
+          return {
+              ...state,
+              quote: action.payload,
+              isFetching: false,
+              error: "",
+          };
+          case GET_QUOTE_FAIL:
+              return {
+                  ...state,
+                  error: action.payload
+              }
+    default:
+      return state;
+  }
+};

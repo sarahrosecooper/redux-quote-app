@@ -1,10 +1,22 @@
-export const NEW_QUOTE = "NEW_QUOTE" // action type
+import axios from 'axios'
 
-export const newQuote = quote => {
-    console.log(quote);
-    return { // action
-        type: NEW_QUOTE,
-        payload: quote
-    }
+export const GET_QUOTE = "GET_QUOTE" // action type
+export const GET_QUOTE_SUCCESS = "GET_QUOTE_SUCCESS"
+export const GET_QUOTE_FAIL = 'GET_QUOTE_FAIL'
+
+export const getQuote = () => dispatch => {
+    dispatch({
+        type: GET_QUOTE
+    })
+    axios.get('https://api.tronalddump.io/random/quote')
+    .then(response => 
+        dispatch({ 
+            type: GET_QUOTE_SUCCESS,
+            payload: response
+        
+        }))
+        .catch(error => dispatch({
+            type: GET_QUOTE_FAIL,
+            payload: error
+        }))
 }
-

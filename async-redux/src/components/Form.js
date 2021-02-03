@@ -4,7 +4,7 @@ import React from "react";
 const Form = props => {
     return (
         <div>This is the form component
-            <button>💩 More?</button>
+            <button>💩 New?</button>
         </div>
     )
 }
