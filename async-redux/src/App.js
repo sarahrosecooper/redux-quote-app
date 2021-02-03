@@ -6,7 +6,6 @@ import Form from "./components/Form"
 import { connect } from "react-redux"
 
 const App = (props) => {
-  console.log(props.quote)
   return (
     <div className="App">
       <Header />

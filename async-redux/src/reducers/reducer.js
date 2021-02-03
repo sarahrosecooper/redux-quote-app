@@ -1,7 +1,7 @@
 import { GET_QUOTE, GET_QUOTE_SUCCESS, GET_QUOTE_FAIL } from "../actions";
 
 const initialState = {
-  quote: [],
+  quote: "",
   error: "",
   isFetching: false,
 };

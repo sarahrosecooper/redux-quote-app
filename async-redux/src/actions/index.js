@@ -7,14 +7,17 @@ export const GET_QUOTE_FAIL = 'GET_QUOTE_FAIL'
 export const getQuote = () => dispatch => {
     dispatch({
         type: GET_QUOTE
-    })
-    axios.get('https://api.tronalddump.io/random/quote')
-    .then(response => 
+    });
+    axios
+    .get('https://api.tronalddump.io/random/quote')
+    .then(response => {
+        console.log("response", response)
         dispatch({ 
             type: GET_QUOTE_SUCCESS,
-            payload: response
+            payload: response.data.value
         
-        }))
+        })
+    })
         .catch(error => dispatch({
             type: GET_QUOTE_FAIL,
             payload: error
