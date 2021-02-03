@@ -14,7 +14,8 @@ export const getQuote = () => dispatch => {
         console.log("response", response)
         dispatch({ 
             type: GET_QUOTE_SUCCESS,
-            payload: response.data.value
+            payload: response.data.value 
+            // response.data.tags
         
         })
     })

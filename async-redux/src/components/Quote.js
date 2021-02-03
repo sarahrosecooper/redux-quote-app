@@ -12,7 +12,9 @@ const Quote = (props) => {
 
     return (
         <div>
-           {props.quote}
+            <h1>This is the Header component</h1>
+           <p>"{props.quote}"</p>
+           <br></br> -- A quote by Donald Trump about {props.quote}
 
     <button onClick={fetchQuote}>💩 New?</button>
             
