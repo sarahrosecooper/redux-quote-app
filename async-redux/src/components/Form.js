@@ -12,9 +12,9 @@ const Form = props => {
 
     return (
         <div>
-           courtesy of <a href="https://www.tronalddump.io/">trondalddump.io</a>{" "}
-           <button onClick={fetchQuote}>💩 New?</button>
-            
+           {`(courtesy of`} <a href="https://www.tronalddump.io/">trondalddump.io</a>{`)`}{" "}
+           <button onClick={fetchQuote}>🤢 New?</button>
+           
         </div>
     )
 }

@@ -9,9 +9,8 @@ const Quote = (props) => {
 
     return (
         <div>
-           <p>"{props.quote}"</p>
-           <br></br> -- A quote by Donald Trump about {props.tag}
-        <br></br><br></br>
+           <p class="quote">🤮 "{props.quote}" 💩</p>
+           <p>-- A quote by Donald Trump about <span class="tag">{props.tag}</span></p>
         <Form props={props}/>
        
         </div>
