@@ -9,7 +9,6 @@ const Quote = (props) => {
 
     return (
         <div>
-            <h1>quotes from your favorite idiot</h1>
            <p>"{props.quote}"</p>
            <br></br> -- A quote by Donald Trump about {props.tag}
         <br></br><br></br>
