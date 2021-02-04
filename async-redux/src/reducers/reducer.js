@@ -1,8 +1,8 @@
 import { GET_QUOTE, GET_QUOTE_SUCCESS, GET_QUOTE_FAIL, GET_TAG, GET_TAG_SUCCESS, GET_TAG_FAIL} from "../actions";
 
 const initialState = {
-  quote: "",
-  tag: [],
+  quote: "A quote to make you feel better about yourself coming soon.",
+  tag: ["a mystery for you and me!",],
   error: "",
   isFetching: false,
 };
