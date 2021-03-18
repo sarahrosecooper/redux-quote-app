@@ -8,8 +8,9 @@ const App = (props) => {
     <div className="App">
       <h1>quotes from your favorite idiot</h1>
       <img
+        className="trump"
         alt="assorted trump"
-        src="https://lh3.googleusercontent.com/proxy/MAtbfHWfXeI6Ovbh8ctnBrf9v_jUt7Y8e05ejqxiMAI0A5gEbM51Y3Tvm5lJJ0IqE9JNsK_azWqdH5NdikehNp046oh6Ay-9EjulIstdU_gDp7Mi0v9qjiYU-c19qiFcWDM53RFWq2GHZDs38tlNhXVyHV-xH-OEC38wTfpuhHQ"
+        src="https://images.unsplash.com/photo-1585241937013-d4a82152ebf4?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8dHJ1bXB8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
       ></img>
       <Quote quote={props.quote} />
     </div>
